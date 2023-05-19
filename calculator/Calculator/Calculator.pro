@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2023-05-19T11:27:09
+# Project created by QtCreator 2023-05-19T14:44:10
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = calculator
+TARGET = Calculator
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -25,10 +25,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        calculator.cpp
 
 HEADERS += \
-        mainwindow.h
+        calculator.h
 
 FORMS += \
-        mainwindow.ui
+        calculator.ui
