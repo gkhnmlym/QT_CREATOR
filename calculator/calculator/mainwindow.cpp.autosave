@@ -1,0 +1,134 @@
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+void MainWindow::on_btnback_clicked()
+{
+    
+}
+
+void MainWindow::on_btnpar1_clicked()
+{
+    
+}
+
+void MainWindow::on_btnpar2_clicked()
+{
+    
+}
+
+void MainWindow::on_btnmod_clicked()
+{
+    
+}
+
+void MainWindow::on_btnn_clicked()
+{
+    
+}
+
+void MainWindow::on_btn7_clicked()
+{
+    
+}
+
+void MainWindow::on_btn8_clicked()
+{
+    
+}
+
+void MainWindow::on_btn9_clicked()
+{
+    
+}
+
+void MainWindow::on_btnbol_clicked()
+{
+    
+}
+
+void MainWindow::on_btnkok_clicked()
+{
+    
+}
+
+void MainWindow::on_btn4_clicked()
+{
+    
+}
+
+void MainWindow::on_btn5_clicked()
+{
+    
+}
+
+void MainWindow::on_btn6_clicked()
+{
+    
+}
+
+void MainWindow::on_btncarp_clicked()
+{
+    
+}
+
+void MainWindow::on_btnkare_clicked()
+{
+    
+}
+
+void MainWindow::on_btn1_clicked()
+{
+    
+}
+
+void MainWindow::on_btn2_clicked()
+{
+    
+}
+
+void MainWindow::on_btn3_clicked()
+{
+    
+}
+
+void MainWindow::on_btncik_clicked()
+{
+    
+}
+
+void MainWindow::on_btnsonuc_clicked()
+{
+    
+}
+
+void MainWindow::on_btn0_clicked()
+{
+    
+}
+
+void MainWindow::on_btnvirgul_clicked()
+{
+    
+}
+
+void MainWindow::on_btnyuzde_clicked()
+{
+    
+}
+
+void MainWindow::on_btntop_clicked()
+{
+    
+}
