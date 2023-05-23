@@ -20,7 +20,7 @@ private:
 private slots:
     void NumPressed();
     void MathButtonPressed();
-    void EqualButton();
+    void EqualButtonPressed();
     void ChangeNumberSign();
 };
 

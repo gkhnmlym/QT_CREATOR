@@ -21,6 +21,12 @@ Calculator::Calculator(QWidget *parent) :
         numButtons[i] = Calculator::findChild<QPushButton *>(butName);
         connect(numButtons[i], SIGNAL(relased()), this, SLOT(NumPressed()));
     }
+        connect(ui->Add, SIGNAL(relased()), this, SLOT(MathButtonPressed()));
+        connect(ui->Subract, SIGNAL(relased()), this, SLOT(MathButtonPressed()));
+        connect(ui->Multiply, SIGNAL(relased()), this, SLOT(MathButtonPressed()));
+        connect(ui->Divide, SIGNAL(relased()), this, SLOT(MathButtonPressed()));
+        connect(ui->Equals, SIGNAL(relased()), this, SLOT(EqualButtonPressed()));
+        connect(ui->ChangeSign, SIGNAL(relased()), this, SLOT(ChangeNumberSign()));
 }
 
 Calculator::~Calculator()
@@ -39,7 +45,6 @@ void Calculator::NumPressed(){
         QString newVal = displayVal + butVal;
         double dblNewVal = newVal.toDouble();
         ui->Display->setText(QString::number(dblNewVal, 'g', 16));
-
     }
 }
 
@@ -67,7 +72,7 @@ void Calculator::MathButtonPressed(){
     ui->Display->setText("");
 }
 
-void Calculator::EqualButton(){
+void Calculator::EqualButtonPressed(){
     double solution = 0.0;
     QString displayVal = ui->Display->text();
     double dblDisplayVal = displayVal.toDouble();
@@ -89,5 +94,12 @@ void Calculator::EqualButton(){
 }
 
 void Calculator::ChangeNumberSign(){
+    QString displayVal = ui->Display->text();
+    QRegExp reg("[-]?[0-9.]*");
+    if(reg.exactMatch(displayVal)){
+        double dblDisplayVal = displayVal.toDouble();
+        double dblDisplayValSign = -1 * dblDisplayVal;
+        ui->Display->setText(QString::number(dblDisplayValSign));
 
+    }
 }

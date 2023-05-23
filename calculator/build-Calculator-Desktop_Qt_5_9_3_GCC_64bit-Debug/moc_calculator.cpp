@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Calculator_t {
     QByteArrayData data[6];
-    char stringdata0[70];
+    char stringdata0[77];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,12 +35,12 @@ QT_MOC_LITERAL(0, 0, 10), // "Calculator"
 QT_MOC_LITERAL(1, 11, 10), // "NumPressed"
 QT_MOC_LITERAL(2, 22, 0), // ""
 QT_MOC_LITERAL(3, 23, 17), // "MathButtonPressed"
-QT_MOC_LITERAL(4, 41, 11), // "EqualButton"
-QT_MOC_LITERAL(5, 53, 16) // "ChangeNumberSign"
+QT_MOC_LITERAL(4, 41, 18), // "EqualButtonPressed"
+QT_MOC_LITERAL(5, 60, 16) // "ChangeNumberSign"
 
     },
     "Calculator\0NumPressed\0\0MathButtonPressed\0"
-    "EqualButton\0ChangeNumberSign"
+    "EqualButtonPressed\0ChangeNumberSign"
 };
 #undef QT_MOC_LITERAL
 
@@ -80,7 +80,7 @@ void Calculator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->NumPressed(); break;
         case 1: _t->MathButtonPressed(); break;
-        case 2: _t->EqualButton(); break;
+        case 2: _t->EqualButtonPressed(); break;
         case 3: _t->ChangeNumberSign(); break;
         default: ;
         }
