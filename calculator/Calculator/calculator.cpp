@@ -44,11 +44,48 @@ void Calculator::NumPressed(){
 }
 
 void Calculator::MathButtonPressed(){
-
+    divTrigger = false;
+    multTrigger = false;
+    addTrigger = false;
+    subTrigger = false;
+    QString displayVal = ui->Display->text();
+    calcVal = displayVal.toDouble();
+    QPushButton *button = (QPushButton *)sender();
+    QString butVal = button->text();
+    if(QString::compare(butVal, "/", Qt::CaseInsensitive) == 0){
+        divTrigger = true;
+    }
+    else if(QString::compare(butVal, "*", Qt::CaseInsensitive) == 0){
+        multTrigger = true;
+    }
+    else if(QString::compare(butVal, "+", Qt::CaseInsensitive) == 0){
+        addTrigger = true;
+    }
+    else{
+        subTrigger = true;
+    }
+    ui->Display->setText("");
 }
 
 void Calculator::EqualButton(){
-
+    double solution = 0.0;
+    QString displayVal = ui->Display->text();
+    double dblDisplayVal = displayVal.toDouble();
+    if(addTrigger || subTrigger || multTrigger || divTrigger){
+        if (addTrigger) {
+            solution = calcVal + dblDisplayVal;
+        }
+        else if(subTrigger){
+            solution = calcVal - dblDisplayVal;
+        }
+        else if (multTrigger) {
+            solution = calcVal * dblDisplayVal;
+        }
+        else {
+            solution = calcVal / dblDisplayVal;
+        }
+    }
+    ui->Display->setText(QString::number(solution));
 }
 
 void Calculator::ChangeNumberSign(){
