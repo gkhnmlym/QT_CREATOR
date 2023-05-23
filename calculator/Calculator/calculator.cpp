@@ -13,7 +13,7 @@ Calculator::Calculator(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->lndisplay->setText(QString::number(calcVal));
+    ui->Display->setText(QString::number(calcVal));
     QPushButton *numButtons[10];
     for(int i = 0; i < 10; ++i)
     {
@@ -31,14 +31,26 @@ Calculator::~Calculator()
 void Calculator::NumPressed(){
     QPushButton *button = (QPushButton *)sender();
     QString butVal =button->text();
-    QString displayVal = ui->lndisplay->text();
+    QString displayVal = ui->Display->text();
     if((displayVal.toDouble()==0) || (displayVal.toDouble()==0.0)){
-        ui->lndisplay->setText(butVal);
+        ui->Display->setText(butVal);
     }
     else{
         QString newVal = displayVal + butVal;
         double dblNewVal = newVal.toDouble();
-        ui->lndisplay->setText(QString::number(dblNewVal, 'g', 16));
+        ui->Display->setText(QString::number(dblNewVal, 'g', 16));
 
     }
+}
+
+void Calculator::MathButtonPressed(){
+
+}
+
+void Calculator::EqualButton(){
+
+}
+
+void Calculator::ChangeNumberSign(){
+
 }
