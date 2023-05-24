@@ -146,7 +146,7 @@ public:
         Divide->setMaximumSize(QSize(50, 50));
         Divide->setFont(font1);
         Divide->setStyleSheet(QLatin1String("QPushButton{\n"
-"	background-color: 	#E52B50;\n"
+"	background-color: 	#41729F;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -164,7 +164,7 @@ public:
         MemAdd->setMaximumSize(QSize(50, 50));
         MemAdd->setFont(font1);
         MemAdd->setStyleSheet(QLatin1String("QPushButton{\n"
-"	background-color: 	#E52B50;\n"
+"	background-color: 	#41729F;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -182,7 +182,7 @@ public:
         Multiply->setMaximumSize(QSize(50, 50));
         Multiply->setFont(font1);
         Multiply->setStyleSheet(QLatin1String("QPushButton{\n"
-"	background-color: 	#E52B50;\n"
+"	background-color: 	#41729F;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -200,7 +200,7 @@ public:
         MemClear->setMaximumSize(QSize(50, 50));
         MemClear->setFont(font1);
         MemClear->setStyleSheet(QLatin1String("QPushButton{\n"
-"	background-color: 	#E52B50;\n"
+"	background-color: 	#41729F;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -272,7 +272,7 @@ public:
         Add->setMaximumSize(QSize(50, 50));
         Add->setFont(font1);
         Add->setStyleSheet(QLatin1String("QPushButton{\n"
-"	background-color: 	#E52B50;\n"
+"	background-color: 	#41729F;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -290,7 +290,7 @@ public:
         MemGet->setMaximumSize(QSize(50, 50));
         MemGet->setFont(font1);
         MemGet->setStyleSheet(QLatin1String("QPushButton{\n"
-"	background-color: 	#E52B50;\n"
+"	background-color: 	#41729F;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -362,7 +362,7 @@ public:
         Subract->setMaximumSize(QSize(50, 50));
         Subract->setFont(font1);
         Subract->setStyleSheet(QLatin1String("QPushButton{\n"
-"	background-color: 	#E52B50;\n"
+"	background-color: 	#41729F;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -380,7 +380,7 @@ public:
         Equals->setMaximumSize(QSize(50, 50));
         Equals->setFont(font1);
         Equals->setStyleSheet(QLatin1String("QPushButton{\n"
-"	background-color: 	#E52B50;\n"
+"	background-color: 	#41729F;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
