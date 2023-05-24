@@ -19,14 +19,15 @@ Calculator::Calculator(QWidget *parent) :
     {
         QString butName = "Button" + QString::number(i);
         numButtons[i] = Calculator::findChild<QPushButton *>(butName);
-        connect(numButtons[i], SIGNAL(relased()), this, SLOT(NumPressed()));
+        connect(numButtons[i], SIGNAL(released()), this, SLOT(NumPressed()));
     }
-        connect(ui->Add, SIGNAL(relased()), this, SLOT(MathButtonPressed()));
-        connect(ui->Subract, SIGNAL(relased()), this, SLOT(MathButtonPressed()));
-        connect(ui->Multiply, SIGNAL(relased()), this, SLOT(MathButtonPressed()));
-        connect(ui->Divide, SIGNAL(relased()), this, SLOT(MathButtonPressed()));
-        connect(ui->Equals, SIGNAL(relased()), this, SLOT(EqualButtonPressed()));
-        connect(ui->ChangeSign, SIGNAL(relased()), this, SLOT(ChangeNumberSign()));
+
+        connect(ui->Add, SIGNAL(released()), this, SLOT(MathButtonPressed()));
+        connect(ui->Subract, SIGNAL(released()), this, SLOT(MathButtonPressed()));
+        connect(ui->Multiply, SIGNAL(released()), this, SLOT(MathButtonPressed()));
+        connect(ui->Divide, SIGNAL(released()), this, SLOT(MathButtonPressed()));
+        connect(ui->Equals, SIGNAL(released()), this, SLOT(EqualButtonPressed()));
+        connect(ui->ChangeSign, SIGNAL(released()), this, SLOT(ChangeNumberSign()));
 }
 
 Calculator::~Calculator()
