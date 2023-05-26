@@ -1,7 +1,10 @@
 #include "todomodel.h"
 
+#include "todolist.h"
+
 ToDoModel::ToDoModel(QObject *parent)
     : QAbstractListModel(parent)
+    , mList(nullptr)
 {
 }
 
@@ -52,8 +55,30 @@ Qt::ItemFlags ToDoModel::flags(const QModelIndex &index) const
 
 QHash<int, QByteArray> ToDoModel::roleNames() const
 {
-    qHash<int, QByteArray> names;
+    QHash<int, QByteArray> names;
     names[DoneRole] = "done";
     names[DescriptionRole] = "description";
     return names;
+}
+
+ToDoList *ToDoModel::list() const
+{
+    return mList;
+}
+
+void ToDoModel::setList(ToDoList *list)
+{
+    beginResetModel();
+
+    if(mList)
+        mList->disconnect(this);
+
+    mList = list;
+
+    if (mList){
+        connect(mList, &ToDoList::preItemAppended, thisi [=](){
+            const int index = mList->items().size();
+            beginInsertRows(QModelIndex(), index, index);
+        });
+    }
 }
