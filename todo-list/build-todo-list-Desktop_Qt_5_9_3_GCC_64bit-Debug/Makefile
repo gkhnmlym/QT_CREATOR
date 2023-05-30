@@ -935,7 +935,10 @@ todomodel.o: ../../to\ do\ list/todo-list/todo-list/todomodel.cpp ../../to\ do\ 
 		/home/kegmulayim/Qt5.9.3/5.9.3/gcc_64/include/QtCore/qset.h \
 		/home/kegmulayim/Qt5.9.3/5.9.3/gcc_64/include/QtCore/qcontiguouscache.h \
 		/home/kegmulayim/Qt5.9.3/5.9.3/gcc_64/include/QtCore/qsharedpointer.h \
-		/home/kegmulayim/Qt5.9.3/5.9.3/gcc_64/include/QtCore/qsharedpointer_impl.h
+		/home/kegmulayim/Qt5.9.3/5.9.3/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		../../to\ do\ list/todo-list/todo-list/todolist.h \
+		/home/kegmulayim/Qt5.9.3/5.9.3/gcc_64/include/QtCore/QObject \
+		/home/kegmulayim/Qt5.9.3/5.9.3/gcc_64/include/QtCore/QVector
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o todomodel.o ../../to\ do\ list/todo-list/todo-list/todomodel.cpp
 
 todolist.o: ../../to\ do\ list/todo-list/todo-list/todolist.cpp ../../to\ do\ list/todo-list/todo-list/todolist.h \

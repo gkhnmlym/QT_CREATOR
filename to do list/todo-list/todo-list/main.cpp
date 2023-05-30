@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     qmlRegisterType<ToDoModel>("ToDo", 1, 0, "ToDoModel");
+    qmlRegisterUncreatableType<ToDoList>("ToDo", 1, 0, "ToDoList", QStringLiteral("ToDolist shoould not be created in QML"));
 
     ToDoList toDoList;
     QQmlApplicationEngine engine;
