@@ -20,7 +20,7 @@ int ToDoModel::rowCount(const QModelIndex &parent) const
 
 QVariant ToDoModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid())
+    if (!index.isValid() || !mList)
         return QVariant();
 
     const ToDoItem item =mList->items().at(index.row());
@@ -93,7 +93,7 @@ void ToDoModel::setList(ToDoList *list)
             beginInsertRows(QModelIndex(), index, index);
         });
         connect(mList, &ToDoList::postItemAppended, this, [=](){
-            endInsertColumns();
+            endInsertRows();
         });
         connect(mList, &ToDoList::preItemRemoved, this, [=](int index){
             beginRemoveRows(QModelIndex(), index, index);

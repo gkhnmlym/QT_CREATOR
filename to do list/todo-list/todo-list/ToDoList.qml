@@ -44,5 +44,7 @@ ColumnLayout {
             onClicked: toDoList.removeCompletedItems()
             Layout.fillWidth: true
         }
+
     }
+
 }
