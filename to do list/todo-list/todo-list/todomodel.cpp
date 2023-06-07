@@ -101,6 +101,9 @@ void ToDoModel::setList(ToDoList *list)
         connect(mList, &ToDoList::postItemRemoved, this, [=](){
             endRemoveRows();
         });
+        connect(mList, &ToDoList::allSelectItems, this, [=](){
+            endRemoveRows();
+        });
     }
     endResetModel();
 }

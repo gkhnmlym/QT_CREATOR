@@ -44,7 +44,15 @@ ColumnLayout {
             onClicked: toDoList.removeCompletedItems()
             Layout.fillWidth: true
         }
-
+        Button {
+            text: qsTr("All   ")
+            onClicked: toDoList.allSelectItems()
+            Layout.fillWidth: true
+        }
+        Button {
+            text: qsTr("TEst   ")
+            onClicked: toDoList.itemChanged(1)
+            Layout.fillWidth: true
+        }
     }
-
 }

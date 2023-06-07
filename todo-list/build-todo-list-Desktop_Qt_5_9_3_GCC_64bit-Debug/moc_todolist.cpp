@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ToDoList_t {
-    QByteArrayData data[9];
-    char stringdata0[112];
+    QByteArrayData data[10];
+    char stringdata0[127];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,12 +39,14 @@ QT_MOC_LITERAL(4, 43, 14), // "preItemRemoved"
 QT_MOC_LITERAL(5, 58, 5), // "index"
 QT_MOC_LITERAL(6, 64, 15), // "postItemRemoved"
 QT_MOC_LITERAL(7, 80, 10), // "appendItem"
-QT_MOC_LITERAL(8, 91, 20) // "removeCompletedItems"
+QT_MOC_LITERAL(8, 91, 20), // "removeCompletedItems"
+QT_MOC_LITERAL(9, 112, 14) // "allSelectItems"
 
     },
     "ToDoList\0preItemAppended\0\0postItemAppended\0"
     "preItemRemoved\0index\0postItemRemoved\0"
-    "appendItem\0removeCompletedItems"
+    "appendItem\0removeCompletedItems\0"
+    "allSelectItems"
 };
 #undef QT_MOC_LITERAL
 
@@ -54,7 +56,7 @@ static const uint qt_meta_data_ToDoList[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -62,14 +64,15 @@ static const uint qt_meta_data_ToDoList[] = {
        4,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   44,    2, 0x06 /* Public */,
-       3,    0,   45,    2, 0x06 /* Public */,
-       4,    1,   46,    2, 0x06 /* Public */,
-       6,    0,   49,    2, 0x06 /* Public */,
+       1,    0,   49,    2, 0x06 /* Public */,
+       3,    0,   50,    2, 0x06 /* Public */,
+       4,    1,   51,    2, 0x06 /* Public */,
+       6,    0,   54,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       7,    0,   50,    2, 0x0a /* Public */,
-       8,    0,   51,    2, 0x0a /* Public */,
+       7,    0,   55,    2, 0x0a /* Public */,
+       8,    0,   56,    2, 0x0a /* Public */,
+       9,    0,   57,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -78,6 +81,7 @@ static const uint qt_meta_data_ToDoList[] = {
     QMetaType::Void,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -96,6 +100,7 @@ void ToDoList::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 3: _t->postItemRemoved(); break;
         case 4: _t->appendItem(); break;
         case 5: _t->removeCompletedItems(); break;
+        case 6: _t->allSelectItems(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -156,13 +161,13 @@ int ToDoList::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 7)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 6;
+        _id -= 7;
     }
     return _id;
 }

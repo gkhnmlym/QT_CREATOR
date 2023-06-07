@@ -19,7 +19,7 @@ public:
     QVector<ToDoItem> items() const;
 
     bool setItemAt(int index, const ToDoItem &item);
-
+    void itemChanged(int index);
 signals:
     void preItemAppended();
     void postItemAppended();
@@ -27,9 +27,11 @@ signals:
     void preItemRemoved(int index);
     void postItemRemoved();
 
+
 public slots:
     void appendItem();
     void removeCompletedItems();
+    void allSelectItems();
 
 private:
     QVector<ToDoItem> mItems;

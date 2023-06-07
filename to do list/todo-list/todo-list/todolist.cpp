@@ -1,4 +1,5 @@
 #include "todolist.h"
+#include <QDebug>
 
 ToDoList::ToDoList(QObject *parent) : QObject(parent)
 {
@@ -22,6 +23,11 @@ bool ToDoList::setItemAt(int index, const ToDoItem &item)
 
     mItems[index] = item;
     return true;
+}
+
+void ToDoList::itemChanged(int index)
+{
+    qDebug() << "Item appended" << index;
 }
 
 void ToDoList::appendItem()
@@ -48,5 +54,30 @@ void ToDoList::removeCompletedItems()
         else{
             ++i;
         }
+    }
+}
+
+void ToDoList::allSelectItems()
+{
+    bool allSelected = true;
+
+    // Check if all items are already selected
+    for (const auto& item : mItems) {
+        if (!item.done) {
+            allSelected = false;
+            break;
+        }
+    }
+
+    // Toggle selection status for all items
+    for (int i = 0; i < mItems.size(); ++i) {
+        if (allSelected) {
+            // Deselect all items
+            mItems[i].done = false;
+        } else {
+            // Select all items
+            mItems[i].done = true;
+        }
+        emit itemChanged(i);
     }
 }

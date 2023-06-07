@@ -870,7 +870,9 @@ main.o: ../../to\ do\ list/todo-list/todo-list/main.cpp /home/kegmulayim/Qt5.9.3
 		/home/kegmulayim/Qt5.9.3/5.9.3/gcc_64/include/QtCore/QVector \
 		../../to\ do\ list/todo-list/todo-list/todomodel.h \
 		/home/kegmulayim/Qt5.9.3/5.9.3/gcc_64/include/QtCore/QAbstractListModel \
-		/home/kegmulayim/Qt5.9.3/5.9.3/gcc_64/include/QtCore/qabstractitemmodel.h
+		/home/kegmulayim/Qt5.9.3/5.9.3/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/kegmulayim/Qt5.9.3/5.9.3/gcc_64/include/QtCore/QCoreApplication \
+		/home/kegmulayim/Qt5.9.3/5.9.3/gcc_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../../to\ do\ list/todo-list/todo-list/main.cpp
 
 todomodel.o: ../../to\ do\ list/todo-list/todo-list/todomodel.cpp ../../to\ do\ list/todo-list/todo-list/todomodel.h \
